@@ -10,7 +10,7 @@ if (navigator.geolocation) {
     console.log("Geolocation is not supported by this browser.");
   }
   async function getAddress(){
-    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${APIKEY}&q=${latitude},${longitude}&aqi=no&lang=cs`);
+    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${APIKEY}&q=${latitude},${longitude}&aqi=no&lang=cs`);
     addressData = await response.json();
     console.log(addressData);
     return addressData
